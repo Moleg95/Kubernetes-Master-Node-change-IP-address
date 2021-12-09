@@ -8,10 +8,13 @@ The solution for this issue here:
 #cd /etc/
 
 #mv kubernetes kubernetes-backup
+
 #mv /var/lib/kubelet /var/lib/kubelet-backup
 
 #mkdir -p kubernetes
+
 #cp -r kubernetes-backup/pki kubernetes
+
 #rm kubernetes/pki/{apiserver.*,etcd/peer.*}
 
 #systemctl start docker
